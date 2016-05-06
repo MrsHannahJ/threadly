@@ -4,10 +4,10 @@
          <div class="row">  
            <%= form_for(@new_post) do |f| %>
              <div class="col-xs-8 col-md-10">
-               <input id="comment" type="text" placeholder="share your thoughts">
+               <%= f.text_field :comment, :placeholder =>"share your thoughts" %>
              </div>
              <div class="col-xs-4 col-md-2">
-               <button type="submit" class="btn">post</button>
+               <%= f.submit :post, :class => "btn" %>
              </div>
             <% end %>
          </div>
